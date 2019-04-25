@@ -1,10 +1,26 @@
 import java.util.Scanner;
+import javax.swing.*;
+import java.awt.event.*;
+import java.sql.*;
+
+
 
 public class ProgramTester {
 
+	
 	public static void main(String[] args) {
+		
+		
+		
+		
+		 //new Login();
+		
+		 
+		 
+		 
 		Scanner keyboard = new Scanner (System.in);				  
-
+		
+		
 		
 		System.out.print("Please enter first name: ");
 	    String firstname = keyboard.nextLine(); 
@@ -15,7 +31,7 @@ public class ProgramTester {
 	    System.out.print("Please enter email name: ");
 	    String email = keyboard.nextLine();
 	    System.out.print("Please enter cell phonenumber name: ");
-	    String cellphonenumber = keyboard.nextInt();
+	    String cellphonenumber = keyboard.next();
 	    System.out.print("Please enter password name: ");
 	    String password = keyboard.nextLine();
 	    
