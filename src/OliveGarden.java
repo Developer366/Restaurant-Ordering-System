@@ -13,7 +13,7 @@ public class OliveGarden {
 		this.RestaurantAddress=RestaurantAddress;
 		this.RestaurantID=RestaurantID;
 											
-		//Making Menuitems and adding them to the Hashmap menu
+		//Making Menu items and adding them to the Hashmap menu
 		HashMap <Integer, MenuItem> OliveGardenMenu = new HashMap<Integer, MenuItem>();
 		MenuItem MainDish1 = new MenuItem("Chicken Piccata", 16.79);
 		MenuItem MainDish2 = new MenuItem("Chicken Parmigiana", 16.29);
