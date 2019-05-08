@@ -1,16 +1,16 @@
 import java.util.ArrayList;
-import java.util.HashMap;
+//import java.util.HashMap;
 
 
 public class OliveGardenMenu {
 
 	//HashMap <Integer, MenuItem> OliveGardenMenu = new HashMap<Integer, MenuItem>();
-	ArrayList<MenuItem> olivegardenMenu = new ArrayList<MenuItem>();
+	ArrayList<MenuItem> menu = new ArrayList<MenuItem>();
 	
 	//Constructor
 		public void OliveGardenMenu(){
 			populateMenu();
-		}
+		}//Olive Garden Constructor
 		
 		public void populateMenu(){
 		//Making Menu items and adding them to the Hashmap menu
@@ -29,29 +29,27 @@ public class OliveGardenMenu {
 		MenuItem Beverage1 = new MenuItem("Spiked Strawberry Lemonade", 5.00);
 		MenuItem Beverage2 = new MenuItem("Watermelon Margarita ", 5.00);
 		MenuItem Beverage3 = new MenuItem("Bacardi & Coke ", 5.00);	
-
+	
+		menu.add(1, MainDish1);
+		menu.add(2, MainDish2);
+		menu.add(3, MainDish3);
+		menu.add(4, MainDish4);
 		
-		olivegardenMenu.add(1, MainDish1);
-		olivegardenMenu.add(2, MainDish2);
-		olivegardenMenu.add(3, MainDish3);
-		olivegardenMenu.add(4, MainDish4);
+		menu.add(5, Appetizer1);
+		menu.add(6, Appetizer2);
+		menu.add(7, Appetizer3);
+		menu.add(8, Appetizer4);
 		
-		olivegardenMenu.add(5, Appetizer1);
-		olivegardenMenu.add(6, Appetizer2);
-		olivegardenMenu.add(7, Appetizer3);
-		olivegardenMenu.add(8, Appetizer4);
+		menu.add(9, Beverage1);
+		menu.add(10, Beverage2);
+		menu.add(11, Beverage3);		
 		
-		olivegardenMenu.add(9, Beverage1);
-		olivegardenMenu.add(10, Beverage2);
-		olivegardenMenu.add(11, Beverage3);		
-		
-		}
+		}//end of populate the menu method
 		
 	public void printOliveGardenMenu(){
 		for(int i= 1; i<olivegardenMenu.size(); i++){
-			System.out.println(olivegardenMenu.get(i) );
-		}
-		
+			System.out.println("Number" + i + "  " + olivegardenMenu.get(i) );
+		}		
 	}
 	
 	public String printMenu(){
