@@ -177,6 +177,9 @@ public class Order {
 	
 }
 =======
+<<<<<<< HEAD
+>>>>>>> cb2d44b1b0b9f6c2a5623e896f3048bff4c0a0ce
+=======
 >>>>>>> cb2d44b1b0b9f6c2a5623e896f3048bff4c0a0ce
 
 		
@@ -258,11 +261,16 @@ public String tostring() {
 	str = order.get(i).toString()	+ " \n\n"; 
 	}
 	
+<<<<<<< HEAD
 	return str;
 	
 }
 <<<<<<< HEAD
 */
 =======
+>>>>>>> 547dca0f0c6ffbb8cddb332352a15a34ebcbae77
+>>>>>>> cb2d44b1b0b9f6c2a5623e896f3048bff4c0a0ce
+=======
+}
 >>>>>>> 547dca0f0c6ffbb8cddb332352a15a34ebcbae77
 >>>>>>> cb2d44b1b0b9f6c2a5623e896f3048bff4c0a0ce
