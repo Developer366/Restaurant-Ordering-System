@@ -3,21 +3,21 @@ public class Restaurant {
 
 	private String RestaurantName;
 	private String RestaurantAddress;
-	private String RestaurantID;
+	private String RestaurantPhoneNumber;
 	
-	public Restaurant(String RestaurantName, String RestaurantAddress, String RestaurantID) {
+	public Restaurant(String RestaurantName, String RestaurantAddress, String RestaurantPhoneNumber) {
 		
 		this.RestaurantName=RestaurantName;
 		this.RestaurantAddress=RestaurantAddress;
-		this.RestaurantID=RestaurantID;
+		this.RestaurantPhoneNumber=RestaurantPhoneNumber;
 		
 	}
 	public String toString(){
 		return  "Restaurant Name: " + RestaurantName +
 				"\t Restaurant Address: " + RestaurantAddress + 
-				"\t Restaurant ID: " + RestaurantID;
-		
+				"\t Restaurant Phone Number: " + RestaurantPhoneNumber;		
 	}
+	
 	//RestaurantName
 	public String getRestaurantName() {
 		return RestaurantName;
@@ -33,13 +33,14 @@ public class Restaurant {
 	public void setRestaurantAddress(String RestaurantAddress) {
 		this.RestaurantAddress = RestaurantAddress;
 	}
-	//Restaurant ID
-	public String getRestaurantID() {
-		return RestaurantID;
+	
+	//Restaurant PhoneNumber
+	public String getRestaurantPhoneNumber() {
+		return RestaurantPhoneNumber;
 	}
 
-	public void setRestaurantID(String RestaurantID) {
-		this.RestaurantID = RestaurantID;
+	public void setRestaurantPhoneNumber(String RestaurantPhoneNumber) {
+		this.RestaurantPhoneNumber = RestaurantPhoneNumber;
 	}
 	
 	

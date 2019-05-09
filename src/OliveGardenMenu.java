@@ -8,7 +8,9 @@ public class OliveGardenMenu {
 	
 	//Constructor
 		public void OliveGardenMenu(){
+			
 			populateMenu();
+			
 		}//Olive Garden Constructor
 		
 		public void populateMenu(){
@@ -59,24 +61,6 @@ public class OliveGardenMenu {
 	
 }//end of class
 
-
-/*
-public void printOliveGardenMenu(){
-	for(int i= 1; i<menu.size(); i++){
-		System.out.println("Number" + i + "  " + menu.get(i));
-	}		
-}
-
-public String printMenu(){
-	String thismenu;
-	System.out.println("This olivegarden menu is: \n");
-	for(int i=1; i<menu.size();i++){
-		System.out.println(menu.get(i).toString());
-		
-	}
-	return toString();
-	}
-*/
 
 
 

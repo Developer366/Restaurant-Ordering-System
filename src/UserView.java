@@ -10,14 +10,11 @@ public class UserView {
 
 	//String UserFirstName, String UserLastName, String UserAddress, String UserEmail, String UserCellPhoneNumber, String UserPassword, String UserPaymentCardNumber
 	//UserView(){
+	
 	public void displayUser(User user){
 			System.out.println(user.toString());
 		
 	}
-	
-	
-	
-	
 	
 	
 }

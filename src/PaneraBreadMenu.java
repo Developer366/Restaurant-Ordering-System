@@ -3,12 +3,11 @@ import java.util.HashMap;
 
 public class PaneraBreadMenu {
 
-	ArrayList<MenuItem> PBmenu = new ArrayList<MenuItem>();
-	
+	ArrayList<MenuItem> PBmenu = new ArrayList<MenuItem>();	
 	//HashMap <Integer, MenuItem> OliveGardenMenu = new HashMap<Integer, MenuItem>();
 	
-	public PaneraBreadMenu(){
-		populateMenu();
+	public PaneraBreadMenu(){		
+		populateMenu();		
 	}//end of Panera Bread Constructor
 										
 		//Making Menu items and adding them to the Hashmap menu
@@ -49,40 +48,26 @@ public class PaneraBreadMenu {
 		}//end of constructor
 		
 		
-		//get MenuItem from the Menu
+		//get MenuItem from the Menu to add into order
 		public MenuItem getMenuItem(int index){
 			return PBmenu.get(index);
 		}
-		
-
-		
-		
-		
-		
-		
-		
-		
-		
-		public void printMenu(){
+				
+		public void printMenu() {
 			System.out.println("-------------------------PANERA BREAD MENU-------------------------");
 			System.out.format("[Item]\t" + "%-45s %s%n", "Food Item", "Price");
 				for(int i= 1; i<PBmenu.size(); i++){
 					//System.out.println("Item [" + i + "]:" + "\t" + PBmenu.get(i));
 					//System.out.format("%-20s %-12s,PBmenu.get(i).ItemName + "\t Item Price:" + PBmenu.get(i).getItemPrice());
 					System.out.format("Item[" + i + "]:\t" + "%-45s$%.2f%n", PBmenu.get(i).getItemName(), PBmenu.get(i).getItemPrice());
-
-				}
+				}		
+		}//end of printMenu
 		
-		}
 		//get the menu size
 		public int size() {
 			return PBmenu.size();
 		}
 
-	
-	
-	
 }//end of class
-
 
 
