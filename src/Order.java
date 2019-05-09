@@ -1,16 +1,4 @@
 import java.util.ArrayList;
-<<<<<<< HEAD
-public class Order {
-	
-	 	private int orderID;
-	    private double price;
-	    private String date;  
-	    private String name;
-	    private int quantity;
-
-	    
-	    public Order(int orderID, double price, String date, String name, int quantity) {
-=======
 
 public class Order {
 	
@@ -20,32 +8,9 @@ public class Order {
 	    private final double tax = 1.08875;//8.875 tax
 	 	private double subtotal;
 	 	private double total;
-<<<<<<< HEAD
 	 	private double tip=1.15;//15% tip
 	 	
 
-=======
-	 	private double tip=1.15;
-	 	//private double price;
-	    //private String date;  
-	    //private String name;
-	    //private int quantity;
-	    
-	    
-/*	    public Order(int orderID, double price, String date, String name, int quantity) {
->>>>>>> 547dca0f0c6ffbb8cddb332352a15a34ebcbae77
-	        this.orderID = orderID;
-	        this.price = price;
-	        this.date = date;
-	        this.name = name;
-	        this.quantity = quantity;
-	    }
-<<<<<<< HEAD
-	    
-	    private ArrayList <Menu> order = new ArrayList<Menu>();
-=======
-*/
->>>>>>> cb2d44b1b0b9f6c2a5623e896f3048bff4c0a0ce
 	    public Order(){
 	    	    	
 	    }
@@ -110,15 +75,9 @@ public class Order {
 			System.out.println("subtotal: " + subtotal);
 			System.out.println("total including 8.875% tax and 15% tip: " + total);
 		}
-<<<<<<< HEAD
-=======
-	    
-	    
-	    
-	    
-	    
->>>>>>> 547dca0f0c6ffbb8cddb332352a15a34ebcbae77
-	    
+
+	  
+/*
 	    //order ID getters
 	    public int getOrderID() {
 	        return orderID;
@@ -167,23 +126,15 @@ public class Order {
 	    		
 	    	str = order.get(i).toString()	+ " \n\n"; 
 	    	}
-	    	
+	   	
 			return str;
 	    	
 	    }
-<<<<<<< HEAD
-	    
-	  
+
+	  */ 
 	
 }
-=======
-<<<<<<< HEAD
->>>>>>> cb2d44b1b0b9f6c2a5623e896f3048bff4c0a0ce
-=======
->>>>>>> cb2d44b1b0b9f6c2a5623e896f3048bff4c0a0ce
-
-		
-}// end of class
+// end of class
 
 
 
@@ -198,14 +149,8 @@ public class Order {
 //private int quantity;
 
 
-/*	    public Order(int orderID, double price, String date, String name, int quantity) {
-    this.orderID = orderID;
-    this.price = price;
-    this.date = date;
-    this.name = name;
-    this.quantity = quantity;
-}
-*/
+	
+
 
 
 
@@ -259,18 +204,5 @@ public String tostring() {
 	for(int i=0;i< order.size();i++) {
 		
 	str = order.get(i).toString()	+ " \n\n"; 
-	}
-	
-<<<<<<< HEAD
-	return str;
-	
 }
-<<<<<<< HEAD
 */
-=======
->>>>>>> 547dca0f0c6ffbb8cddb332352a15a34ebcbae77
->>>>>>> cb2d44b1b0b9f6c2a5623e896f3048bff4c0a0ce
-=======
-}
->>>>>>> 547dca0f0c6ffbb8cddb332352a15a34ebcbae77
->>>>>>> cb2d44b1b0b9f6c2a5623e896f3048bff4c0a0ce
