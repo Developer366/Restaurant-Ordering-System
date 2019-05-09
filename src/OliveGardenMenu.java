@@ -1,11 +1,18 @@
 import java.util.ArrayList;
 //import java.util.HashMap;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 547dca0f0c6ffbb8cddb332352a15a34ebcbae77
 
 public class OliveGardenMenu {
 
 	//HashMap <Integer, MenuItem> OliveGardenMenu = new HashMap<Integer, MenuItem>();
+<<<<<<< HEAD
 	ArrayList<MenuItem> menu = new ArrayList<MenuItem>();
+=======
+	ArrayList<MenuItem> OGmenu = new ArrayList<MenuItem>();
+>>>>>>> 547dca0f0c6ffbb8cddb332352a15a34ebcbae77
 	
 	//Constructor
 		public void OliveGardenMenu(){
@@ -30,6 +37,7 @@ public class OliveGardenMenu {
 		MenuItem Beverage2 = new MenuItem("Watermelon Margarita ", 5.00);
 		MenuItem Beverage3 = new MenuItem("Bacardi & Coke ", 5.00);	
 	
+<<<<<<< HEAD
 		menu.add(1, MainDish1);
 		menu.add(2, MainDish2);
 		menu.add(3, MainDish3);
@@ -57,13 +65,56 @@ public class OliveGardenMenu {
 		System.out.println("This olivegarden menu is: \n");
 		for(int i=1; i<olivegardenMenu.size();i++){
 			System.out.println(olivegardenMenu.get(i).toString());
+=======
+		OGmenu.add(1, MainDish1);
+		OGmenu.add(2, MainDish2);
+		OGmenu.add(3, MainDish3);
+		OGmenu.add(4, MainDish4);
+		
+		OGmenu.add(5, Appetizer1);
+		OGmenu.add(6, Appetizer2);
+		OGmenu.add(7, Appetizer3);
+		OGmenu.add(8, Appetizer4);
+		
+		OGmenu.add(9, Beverage1);
+		OGmenu.add(10, Beverage2);
+		OGmenu.add(11, Beverage3);		
+		
+		}//end of populate the menu method
+		
+		public void printMenu(){
+			System.out.println("-------------------------OLIVE GARDEN MENU-------------------------");
+			System.out.format("[Item]\t" + "%-45s %s%n", "Food Item", "Price");
+			for(int i= 1; i<OGmenu.size(); i++){
+				//System.out.println("Item [" + i + "]:" + "\t" + PBmenu.get(i));
+				//System.out.format("%-20s %-12s,PBmenu.get(i).ItemName + "\t Item Price:" + PBmenu.get(i).getItemPrice());
+				System.out.format("Item[" + i + "]:\t" + "%-45s$%.2f%n", OGmenu.get(i).getItemName(), OGmenu.get(i).getItemPrice());
+
+			}
+>>>>>>> 547dca0f0c6ffbb8cddb332352a15a34ebcbae77
 			
 		}
-		return toString();
-	}
-	
 	
 }//end of class
+
+
+/*
+public void printOliveGardenMenu(){
+	for(int i= 1; i<menu.size(); i++){
+		System.out.println("Number" + i + "  " + menu.get(i));
+	}		
+}
+
+public String printMenu(){
+	String thismenu;
+	System.out.println("This olivegarden menu is: \n");
+	for(int i=1; i<menu.size();i++){
+		System.out.println(menu.get(i).toString());
+		
+	}
+	return toString();
+	}
+*/
 
 
 

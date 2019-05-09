@@ -3,24 +3,18 @@ import java.util.HashMap;
 
 public class PaneraBreadMenu {
 
-
-	ArrayList<MenuItem> panerabreadMenu = new ArrayList<MenuItem>();
-	//private String RestaurantName;
-	//private String RestaurantAddress;
-	//private String RestaurantID;
+	ArrayList<MenuItem> PBmenu = new ArrayList<MenuItem>();
+	
 	//HashMap <Integer, MenuItem> OliveGardenMenu = new HashMap<Integer, MenuItem>();
 	
-	public void PaneraBreadMenu(){
+	public PaneraBreadMenu(){
 		populateMenu();
-	}
-	//public OliveGarden(String RestaurantName, String RestaurantAddress, String RestaurantID) {		
-	//	this.RestaurantName=RestaurantName;
-	//	this.RestaurantAddress=RestaurantAddress;
-	//	this.RestaurantID=RestaurantID;
-											
+	}//end of Panera Bread Constructor
+										
 		//Making Menu items and adding them to the Hashmap menu
 		//HashMap <Integer, MenuItem> PaneraBreadMenu = new HashMap<Integer, MenuItem>();
 		public void populateMenu(){
+			
 		MenuItem MainDish1 = new MenuItem("Chipotle Chicken Avocado Melt ", 9.59);
 		MenuItem MainDish2 = new MenuItem("Roasted Turkey, Apple & Cheddar Sandwich ", 9.99);
 		MenuItem MainDish3 = new MenuItem("BBQ Chicken Flatbread", 6.79);
@@ -36,29 +30,57 @@ public class PaneraBreadMenu {
 		MenuItem Beverage2 = new MenuItem("Passion Papaya Green Tea", 2.69);
 		MenuItem Beverage3 = new MenuItem("Blood Orange Lemonade", 2.69);	
 
-		panerabreadMenu.add(1, MainDish1);
-		panerabreadMenu.add(2, MainDish2);
-		panerabreadMenu.add(3, MainDish3);
-		panerabreadMenu.add(4, MainDish4);
+		PBmenu.add(0, null);
+		PBmenu.add(1, MainDish1);
+		PBmenu.add(2, MainDish2);
+		PBmenu.add(3, MainDish3);
+		PBmenu.add(4, MainDish4);
+		PBmenu.add(5, MainDish5);
 		
-		panerabreadMenu.add(5, Appetizer1);
-		panerabreadMenu.add(6, Appetizer2);
-		panerabreadMenu.add(7, Appetizer3);
-		panerabreadMenu.add(8, Appetizer4);
+		PBmenu.add(6, Appetizer1);
+		PBmenu.add(7, Appetizer2);
+		PBmenu.add(8, Appetizer3);
+		PBmenu.add(9, Appetizer4);
 		
-		panerabreadMenu.add(9, Beverage1);
-		panerabreadMenu.add(10, Beverage2);
-	
-		//end of constructor
-	
+		PBmenu.add(10, Beverage1);
+		PBmenu.add(11, Beverage2);
+		PBmenu.add(12, Beverage3);
+		
+		}//end of constructor
+		
+		
+		//get MenuItem from the Menu
+		public MenuItem getMenuItem(int index){
+			return PBmenu.get(index);
 		}
 		
-	public void printPaneraBreadMenu(){
-		for(int i= 1; i<panerabreadMenu.size(); i++){
-			System.out.println("Item: " + panerabreadMenu.get(i) );
-		}
+
 		
-	}
+		
+		
+		
+		
+		
+		
+		
+		public void printMenu(){
+			System.out.println("-------------------------PANERA BREAD MENU-------------------------");
+			System.out.format("[Item]\t" + "%-45s %s%n", "Food Item", "Price");
+				for(int i= 1; i<PBmenu.size(); i++){
+					//System.out.println("Item [" + i + "]:" + "\t" + PBmenu.get(i));
+					//System.out.format("%-20s %-12s,PBmenu.get(i).ItemName + "\t Item Price:" + PBmenu.get(i).getItemPrice());
+					System.out.format("Item[" + i + "]:\t" + "%-45s$%.2f%n", PBmenu.get(i).getItemName(), PBmenu.get(i).getItemPrice());
+
+				}
+		
+		}
+		//get the menu size
+		public int size() {
+			return PBmenu.size();
+		}
+
+	
+	
 	
 }//end of class
 
