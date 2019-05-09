@@ -1,4 +1,16 @@
 import java.util.ArrayList;
+<<<<<<< HEAD
+public class Order {
+	
+	 	private int orderID;
+	    private double price;
+	    private String date;  
+	    private String name;
+	    private int quantity;
+
+	    
+	    public Order(int orderID, double price, String date, String name, int quantity) {
+=======
 
 public class Order {
 	
@@ -8,9 +20,32 @@ public class Order {
 	    private final double tax = 1.08875;//8.875 tax
 	 	private double subtotal;
 	 	private double total;
+<<<<<<< HEAD
 	 	private double tip=1.15;//15% tip
 	 	
 
+=======
+	 	private double tip=1.15;
+	 	//private double price;
+	    //private String date;  
+	    //private String name;
+	    //private int quantity;
+	    
+	    
+/*	    public Order(int orderID, double price, String date, String name, int quantity) {
+>>>>>>> 547dca0f0c6ffbb8cddb332352a15a34ebcbae77
+	        this.orderID = orderID;
+	        this.price = price;
+	        this.date = date;
+	        this.name = name;
+	        this.quantity = quantity;
+	    }
+<<<<<<< HEAD
+	    
+	    private ArrayList <Menu> order = new ArrayList<Menu>();
+=======
+*/
+>>>>>>> cb2d44b1b0b9f6c2a5623e896f3048bff4c0a0ce
 	    public Order(){
 	    	    	
 	    }
@@ -75,6 +110,74 @@ public class Order {
 			System.out.println("subtotal: " + subtotal);
 			System.out.println("total including 8.875% tax and 15% tip: " + total);
 		}
+<<<<<<< HEAD
+=======
+	    
+	    
+	    
+	    
+	    
+>>>>>>> 547dca0f0c6ffbb8cddb332352a15a34ebcbae77
+	    
+	    //order ID getters
+	    public int getOrderID() {
+	        return orderID;
+	    }
+	    //order ID setters
+	    public void setOrderID(int orderID) {
+	        this.orderID = orderID;
+	    }
+	    //price getters
+	    public double getPrice() {
+	        return price;
+	    }
+	    //price setters
+	    public void setPrice(double price) {
+	        this.price = price;
+	    }
+	    //date getters
+	    public String getDate() {
+	        return date;
+	    }
+	    //date setters
+	    public void setDate(String date) {
+	        this.date = date;
+	    }
+	    //name getters
+	    public String getName() {
+	    	return name;
+	    }
+	    //name setters
+	    public void setName(String name) {
+	    	this.name=name;
+	    }
+	    //quantity getters
+	    public int getQuantity() {
+	    	return quantity;
+	    }
+	    //quantity setters
+	    public void setQuantity(int quantity) {
+	    	this.quantity = quantity;
+	    }
+	    
+	    public String tostring() {
+	    	
+	    	String str=" " ;
+	    	for(int i=0;i< order.size();i++) {
+	    		
+	    	str = order.get(i).toString()	+ " \n\n"; 
+	    	}
+	    	
+			return str;
+	    	
+	    }
+<<<<<<< HEAD
+	    
+	  
+	
+}
+=======
+>>>>>>> cb2d44b1b0b9f6c2a5623e896f3048bff4c0a0ce
 
 		
 }// end of class
@@ -158,4 +261,8 @@ public String tostring() {
 	return str;
 	
 }
+<<<<<<< HEAD
 */
+=======
+>>>>>>> 547dca0f0c6ffbb8cddb332352a15a34ebcbae77
+>>>>>>> cb2d44b1b0b9f6c2a5623e896f3048bff4c0a0ce

@@ -1,10 +1,18 @@
 import java.util.ArrayList;
 //import java.util.HashMap;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 547dca0f0c6ffbb8cddb332352a15a34ebcbae77
 
 public class OliveGardenMenu {
 
 	//HashMap <Integer, MenuItem> OliveGardenMenu = new HashMap<Integer, MenuItem>();
+<<<<<<< HEAD
+	ArrayList<MenuItem> menu = new ArrayList<MenuItem>();
+=======
 	ArrayList<MenuItem> OGmenu = new ArrayList<MenuItem>();
+>>>>>>> 547dca0f0c6ffbb8cddb332352a15a34ebcbae77
 	
 	//Constructor
 		public void OliveGardenMenu(){
@@ -31,6 +39,35 @@ public class OliveGardenMenu {
 		MenuItem Beverage2 = new MenuItem("Watermelon Margarita ", 5.00);
 		MenuItem Beverage3 = new MenuItem("Bacardi & Coke ", 5.00);	
 	
+<<<<<<< HEAD
+		menu.add(1, MainDish1);
+		menu.add(2, MainDish2);
+		menu.add(3, MainDish3);
+		menu.add(4, MainDish4);
+		
+		menu.add(5, Appetizer1);
+		menu.add(6, Appetizer2);
+		menu.add(7, Appetizer3);
+		menu.add(8, Appetizer4);
+		
+		menu.add(9, Beverage1);
+		menu.add(10, Beverage2);
+		menu.add(11, Beverage3);		
+		
+		}//end of populate the menu method
+		
+	public void printOliveGardenMenu(){
+		for(int i= 1; i<olivegardenMenu.size(); i++){
+			System.out.println("Number" + i + "  " + olivegardenMenu.get(i) );
+		}		
+	}
+	
+	public String printMenu(){
+		String thismenu;
+		System.out.println("This olivegarden menu is: \n");
+		for(int i=1; i<olivegardenMenu.size();i++){
+			System.out.println(olivegardenMenu.get(i).toString());
+=======
 		OGmenu.add(1, MainDish1);
 		OGmenu.add(2, MainDish2);
 		OGmenu.add(3, MainDish3);
@@ -56,6 +93,7 @@ public class OliveGardenMenu {
 				System.out.format("Item[" + i + "]:\t" + "%-45s$%.2f%n", OGmenu.get(i).getItemName(), OGmenu.get(i).getItemPrice());
 
 			}
+>>>>>>> 547dca0f0c6ffbb8cddb332352a15a34ebcbae77
 			
 		}
 	
