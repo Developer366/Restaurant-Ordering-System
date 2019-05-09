@@ -1,18 +1,17 @@
 import java.io.InputStream;
-import java.sql.*;
 
 public class User {
-
 	//instance variables
-	private String firstname;
-	private String lastname;
-	private String address;
-	private String email;
-	private String cellphonenumber;
-	private String password;
-	private String PaymentCardNumber;
+	private  String firstname;
+	private  String lastname;
+	private  String address;
+	private  String email;
+	private  String cellphonenumber;
+	private  String password;
+	private  String PaymentCardNumber;
 	
-	User (String firstname, String lastname, String address, String email, String cellphonenumber, String password, String CreditCardNumber){
+	//user object constructor
+	public User (String firstname, String lastname, String address, String email, String cellphonenumber, String password, String PaymentCardNumber){
 		this.firstname=firstname;
 		this.lastname=lastname;
 		this.address=address;
@@ -20,8 +19,8 @@ public class User {
 		this.cellphonenumber=cellphonenumber;
 		this.password=password;
 		this.PaymentCardNumber=PaymentCardNumber;		
-	}
-
+	}//end of constructor
+			
 	public String getfirstname() {
 		return firstname;
 	}
@@ -73,9 +72,17 @@ public class User {
 	public String getPaymentCardNumber() {
 		return PaymentCardNumber;
 	}
-	public void setPaymentCardNumber() {
+	public void setPaymentCardNumber(String PaymentCardNumber) {
 		this.PaymentCardNumber = PaymentCardNumber;
 	}
-	
-	
+	public String toString(){
+		return "\nFirst Name: " + firstname + 
+				"\nLast Name: " + lastname + 
+				"\nAddress: " + address + 
+				"\nEmail: " + email + 
+				"\nCell Phone Number: " + cellphonenumber +
+				"\nPassword: " + password + 
+				"\nCredit/Debit card: " + PaymentCardNumber;
+	}
+		
 }

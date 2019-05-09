@@ -1,12 +1,17 @@
-
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Scanner;
+//The Controller coordinates interactions between view and Model
 public class UserController {
-
+	
 	private User model;
 	private UserView view; 
 	
-	public UserController(User model, UserView view){
+	Scanner keyboard = new Scanner (System.in);	
+
+	public UserController(User model, UserView view){		
 		this.model = model;
-		this.view = view;		
+		this.view = view;			
 	}
 	
 	//first name
@@ -65,12 +70,26 @@ public class UserController {
 	}
 	//update view
 	public void updateView(){
-		UserView.printUserDetails(model.getfirstname(), model.getlastname(), model.getaddress(), model.getemail(), model.getcellphonenumber(), model.getpassword(), model.getPaymentCardNumber());
+		this.view.displayUser(model);
 	}
+			
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//model.getfirstname(), model.getlastname(), model.getaddress(), model.getemail(), model.getcellphonenumber(), model.getpassword(), model.getPaymentCardNumber()
 	
 	//https://www.tutorialspoint.com/design_pattern/mvc_pattern.htm
-	
-	
 	
 	
 }

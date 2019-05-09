@@ -2,7 +2,7 @@
 public class MenuItem {
 	String ItemName;
 	double ItemPrice;
-	public Integer toString;
+	//public Integer toString;
 	
 	MenuItem(String ItemName, double ItemPrice){
 		this.ItemName=ItemName;
@@ -26,7 +26,11 @@ public class MenuItem {
 	
 	//display MenuItem
 	public String toString(){
-		return "Menu Item:  " + ItemName + "\t  Item Price: $" + ItemPrice;
+		return "" + ItemName + "\tItem Price: $" + ItemPrice;		
+		//return "%32s%10d%16s", string1, int1, string2
+		//System.out.format("%32s%10d%16s", string1, int1, string2);
+		//return System.out.printf("%s%f", ItemName, ItemPrice);
+		//return String.format("|%-25d|", ItemPrice);
 	}
-	
+	//"|-15s%|,
 }//end of class
