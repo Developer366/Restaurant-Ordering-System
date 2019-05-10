@@ -55,7 +55,7 @@ public class PaneraBreadMenu {
 				
 		public void printMenu() {
 			System.out.println("-------------------------PANERA BREAD MENU-------------------------");
-			System.out.format("[Item]\t" + "%-45s %s%n", "Food Item", "Price");
+			//System.out.format("[Item]\t" + "%-45s %s%n", "Food Item", "Price");
 				for(int i= 1; i<PBmenu.size(); i++){
 					//System.out.println("Item [" + i + "]:" + "\t" + PBmenu.get(i));
 					//System.out.format("%-20s %-12s,PBmenu.get(i).ItemName + "\t Item Price:" + PBmenu.get(i).getItemPrice());
@@ -67,6 +67,8 @@ public class PaneraBreadMenu {
 		public int size() {
 			return PBmenu.size();
 		}
+
+		
 
 }//end of class
 

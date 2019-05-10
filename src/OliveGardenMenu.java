@@ -30,7 +30,8 @@ public class OliveGardenMenu {
 		MenuItem Beverage1 = new MenuItem("Spiked Strawberry Lemonade", 5.00);
 		MenuItem Beverage2 = new MenuItem("Watermelon Margarita ", 5.00);
 		MenuItem Beverage3 = new MenuItem("Bacardi & Coke ", 5.00);	
-	
+		
+		OGmenu.add(0,null);
 		OGmenu.add(1, MainDish1);
 		OGmenu.add(2, MainDish2);
 		OGmenu.add(3, MainDish3);
@@ -47,17 +48,26 @@ public class OliveGardenMenu {
 		
 		}//end of populate the menu method
 		
+		//get MenuItem from the Menu to add into order
+				public MenuItem getMenuItem(int index){
+					return OGmenu.get(index);
+				}
+				
 		public void printMenu(){
 			System.out.println("-------------------------OLIVE GARDEN MENU-------------------------");
-			System.out.format("[Item]\t" + "%-45s %s%n", "Food Item", "Price");
+			//System.out.format("[Item]\t" + "%-45s %s%n", "Food Item", "Price");
 			for(int i= 1; i<OGmenu.size(); i++){
 				//System.out.println("Item [" + i + "]:" + "\t" + PBmenu.get(i));
 				//System.out.format("%-20s %-12s,PBmenu.get(i).ItemName + "\t Item Price:" + PBmenu.get(i).getItemPrice());
 				System.out.format("Item[" + i + "]:\t" + "%-45s$%.2f%n", OGmenu.get(i).getItemName(), OGmenu.get(i).getItemPrice());
-
 			}
 			
 		}
+		
+		//get the menu size
+				public int size() {
+					return OGmenu.size();
+				}
 	
 }//end of class
 
