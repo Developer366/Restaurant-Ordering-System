@@ -1,12 +1,15 @@
 import javax.swing.*;
 import java.awt.event.*;
 import java.sql.*;
+//Template for database
+//User clase
 
 public class Login {
 //Connect to databse instance variables
-	Connection con;
+	
+/*	Connection con;
 	Statement st;
-	ResultSet rs;
+	ResultSet rs; */
 	
 	JFrame f = new JFrame("User Login");
 	JLabel l = new JLabel("Username: ");
@@ -21,14 +24,15 @@ public class Login {
 		connect();
 	
 	}
+	
 	public void connect(){
 		try{				
 		String driver = "sun.jdbc.odbc.JdbcOdbcDriver";
 		Class.forName(driver);
 		
-		String db = "jdbc:odbc:ProjectDatabase";
-		con= DriverManager.getConnection(db);
-		st = con.createStatement();
+//		String db = "jdbc:odbc:ProjectDatabase";
+//		con= DriverManager.getConnection(db);
+//		st = con.createStatement();
 		}
 		catch(Exception ex){
 			System.out.println("Error in connecting");

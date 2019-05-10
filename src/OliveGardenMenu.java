@@ -2,20 +2,24 @@ import java.util.ArrayList;
 //import java.util.HashMap;
 
 public class OliveGardenMenu {
-
-	//HashMap <Integer, MenuItem> OliveGardenMenu = new HashMap<Integer, MenuItem>();
+	/*Other implementations trial 
+	HashMap <Integer, MenuItem> OliveGardenMenu = new HashMap<Integer, MenuItem>(); */
+	
 	ArrayList<MenuItem> OGmenu = new ArrayList<MenuItem>();
 	
 	//Constructor
-		public void OliveGardenMenu(){
+	public void OliveGardenMenu(){
 			
 			populateMenu();
 			
-		}//Olive Garden Constructor
+		}
+	
+	//Olive Garden Constructor
 		
 		public void populateMenu(){
-		//Making Menu items and adding them to the Hashmap menu
-		//HashMap <Integer, MenuItem> OliveGardenMenu = new HashMap<Integer, MenuItem>();
+			
+	//Making Menu items and adding them to the Hashmap menu
+	//HashMap <Integer, MenuItem> OliveGardenMenu = new HashMap<Integer, MenuItem>();
 		
 		MenuItem MainDish1 = new MenuItem("Chicken Piccata", 16.79);
 		MenuItem MainDish2 = new MenuItem("Chicken Parmigiana", 16.29);
