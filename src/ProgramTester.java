@@ -26,7 +26,7 @@ public class ProgramTester {
 		String email = keyboard.nextLine();
 		controller.setUserEmail(email);
 		controller.updateView();
-		
+	
 		//Choosing a Restaurant
 		System.out.println("\nPlease enter which Restaurant you want (Panera Bread / Olive Garden)");
 		System.out.println("Press 1 for Panera Bread | Press 2 for Olive Garden");
@@ -36,19 +36,31 @@ public class ProgramTester {
 
 		Restaurant OliveGarden1 = new Restaurant("Olive Garden"," 54-23 garden street" , "347-354-8323");
 		Restaurant OliveGarden2 = new Restaurant("Olive Garden"," 78-22 utopia pkwy" , "347-343-2356");
-		
+			
+	
 		int ResChoice = keyboard.nextInt();
 			
 		PaneraBreadMenu panerabreadmenu = new PaneraBreadMenu();  
 		OliveGardenMenu olivegardenmenu = new OliveGardenMenu();
-		
+	
+		while((ResChoice!=1)&&(ResChoice!=2)){		
+			System.out.print("Invalid Restaurant choice. Please enter again \n");
+			System.out.println("\nPlease enter which Restaurant you want (Panera Bread / Olive Garden)");
+			System.out.println("Press 1 for Panera Bread | Press 2 for Olive Garden");
+			ResChoice = keyboard.nextInt();
+		}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
 		if(ResChoice == 1){//Panera Bread
 			System.out.println("\nHere are available Panera Bread Restaurants: ");
 			System.out.println("[1] " + PaneraBread1.toString());
 			System.out.println("[2] " + PaneraBread2.toString());
 			System.out.println("\nPlease Select which location you want to order from: ");
 			int LocationChoice = keyboard.nextInt();
-						
+				
+			while((LocationChoice!=1)&&(LocationChoice!=2)){		
+				System.out.print("Invalid Restaurant location. Please enter Location selection: \n");			
+				LocationChoice = keyboard.nextInt();
+			}
 			
 			if(LocationChoice == 1){//Location NUM1
 				System.out.println("Location selected is: " + PaneraBread1.toString() +"\n");
@@ -60,7 +72,7 @@ public class ProgramTester {
 				while(true){
 					if((MenuSelection>0) && (MenuSelection<panerabreadmenu.size())){
 					MenuItem selected=panerabreadmenu.getMenuItem(MenuSelection);
-					System.out.println("[You Selected]" + selected);
+					System.out.println("[You Selected]:\t" + selected);
 					System.out.println("Please Select which FOOD/BEVERAGE you would (Enter Number) like to order | Enter 0 to exit ");
 					PaneraOrder.addOrderItem(selected);
 					//System.out.println(PaneraOrder.tostring());
@@ -89,7 +101,7 @@ public class ProgramTester {
 				while(true){
 					if((MenuSelection>0) && (MenuSelection<panerabreadmenu.size())){
 					MenuItem selected=panerabreadmenu.getMenuItem(MenuSelection);
-					System.out.println("[You Selected]:" + selected);
+					System.out.println("[You Selected]:\t" + selected);
 					System.out.println("Please Select which FOOD/BEVERAGE you would (Enter Number) like to order | Enter 0 to exit");
 					PaneraOrder.addOrderItem(selected);
 					//System.out.println(PaneraOrder.tostring());
@@ -109,6 +121,8 @@ public class ProgramTester {
 				
 		}			
 								
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
 		
 		if (ResChoice == 2){//OliveGarden 1
 			System.out.println("\nHere are available Olive Garden Restaurants: ");
@@ -116,7 +130,11 @@ public class ProgramTester {
 			System.out.println("[2]" + OliveGarden2.toString());
 			System.out.println("\nPlease Select which location you want to order from: ");
 			int LocationChoice = keyboard.nextInt();
-						
+				
+			while((LocationChoice!=1)&&(LocationChoice!=2)){		
+				System.out.print("Invalid Restaurant location. Please enter Location selection: \n");			
+				LocationChoice = keyboard.nextInt();
+			}
 			
 			if(LocationChoice == 1){//Location NUM1
 				System.out.println("Location selected is: " + OliveGarden1.toString() +"\n");
@@ -128,7 +146,7 @@ public class ProgramTester {
 				while(true){
 					if((MenuSelection1>0) && (MenuSelection1<olivegardenmenu.size())){
 					MenuItem selected=olivegardenmenu.getMenuItem(MenuSelection1);
-					System.out.println("[You Selected]" + selected);
+					System.out.println("[You Selected] " + selected);
 					System.out.println("Please Select which FOOD/BEVERAGE you would (Enter Number) like to order | Enter 0 to exit ");
 					OliveGardenOrder.addOrderItem(selected);
 					//System.out.println(PaneraOrder.tostring());
@@ -183,28 +201,25 @@ public class ProgramTester {
 
 
 	
-	public static User InputUserData(){
-		Scanner keyboard = new Scanner (System.in);	
-		System.out.print("Please enter first name: ");
-	    String firstname = keyboard.nextLine(); 
-	    System.out.print("Please enter last name: ");
-	    String lastname = keyboard.nextLine();
-	    System.out.print("Please enter address name: ");
-	    String address = keyboard.nextLine();
-	    System.out.print("Please enter email name: ");
-	    String email = keyboard.nextLine();
-	    System.out.print("Please enter cell phonenumber name: ");
-	    String cellphonenumber = keyboard.nextLine();
-	    System.out.print("Please enter password name: ");
-	    String password = keyboard.nextLine();
-	    System.out.println("Please enter your credit/debit card number");
-	    String PaymentCardNumber = keyboard.nextLine();	    
+		public static User InputUserData(){
+			Scanner keyboard = new Scanner (System.in);	
+			System.out.print("Please enter first name: ");
+			String firstname = keyboard.nextLine(); 
+			System.out.print("Please enter last name: ");
+			String lastname = keyboard.nextLine();
+			System.out.print("Please enter address: ");
+			String address = keyboard.nextLine();
+			System.out.print("Please enter email: ");
+			String email = keyboard.nextLine();
+			System.out.print("Please enter cell phonenumber: ");
+			String cellphonenumber = keyboard.nextLine();
+			System.out.print("Please enter password: ");
+			String password = keyboard.nextLine();
+			System.out.println("Please enter your credit/debit card number");
+			String PaymentCardNumber = keyboard.nextLine();	    
 	    	    
-	    User you = new User(firstname,lastname,address,email,cellphonenumber,password,PaymentCardNumber);
-	    return you;
+			User you = new User(firstname,lastname,address,email,cellphonenumber,password,PaymentCardNumber);
+			return you;
 		}//Get input from user 
-
-
-	
 	
 }//end of class

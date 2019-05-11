@@ -2,15 +2,16 @@ import java.util.ArrayList;
 
 public class Order {
 	
-		//fields
+		//ORDER LIST
 		private ArrayList <MenuItem> order = new ArrayList<MenuItem>();
-	 	private static int orderNO = 0;
+		
+		//fields 	
 	    private final double tax = 1.08875;//8.875 tax
+	    private final double tip=1.15;//15% tip
 	 	private double subtotal;
 	 	private double total;
-	 	private double tip=1.15;//15% tip
+	 	//int orderNO;
 	 	
-
 	    public Order(){
 	    	    	
 	    }
@@ -36,7 +37,7 @@ public class Order {
 	    	return order.size();	    	
 	    }
 	    
-	    //get order number
+/*	    //get order number
 	    public int getNumber(){
 	    	return orderNO;
 	    }
@@ -45,7 +46,7 @@ public class Order {
 	    public void incramentNO(){
 	    	orderNO++;
 	    }
-	    
+*/	    
 	    public String toString(){
 	    	String str = null;
 	    	for(int i= 0; i<order.size();i++){
@@ -54,98 +55,29 @@ public class Order {
 	    	return str;
 	    }
 	    
-	    //prints the ORDER arraylist
+	    //prints the ORDER LIST
 		public void printOrder(){
 			System.out.println("----------------------------ORDER----------------------------");
-			//System.out.format("[Item]\t" + "%-45s %s%n", "Food Item", "Price");
+			System.out.format("[Item]\t\t\t  [Food Item] \t\t\t     [Price]\n");
+
 				for(int i= 0; i<order.size(); i++){
-					//System.out.println("OrderItem [" + i + "]:" + "\t" + order.get(i));
-					//System.out.format("%-20s %-12s,PBmenu.get(i).ItemName + "\t Item Price:" + PBmenu.get(i).getItemPrice());
 					System.out.format("Item[" + (i+1) + "]:\t" + "%-45s$%.2f%n", order.get(i).getItemName(), order.get(i).getItemPrice());					
 				}		
 		}
 	    
 		public void calculateBill(){
-			for(int i= 0; i<order.size(); i++){								//System.out.println("OrderItem [" + i + "]:" + "\t" + order.get(i));
-				//System.out.format("%-20s %-12s,PBmenu.get(i).ItemName + "\t Item Price:" + PBmenu.get(i).getItemPrice());
-				//System.out.format("Item[" + (i+1) + "]:\t" + "%-45s$%.2f%n", order.get(i).getItemName(), order.get(i).getItemPrice());
+			for(int i= 0; i<order.size(); i++){								
 				subtotal+=order.get(i).getItemPrice();				
 			}
+			
 			total+=subtotal*tax*tip;
-			System.out.println("subtotal: " + subtotal);
-			System.out.println("total including 8.875% tax and 15% tip: " + total);
+			System.out.println("[Subtotal]: $" + subtotal);
+			System.out.print("[Total] (including 8.875% tax and 15% tip): $");			
+			System.out.format("%.2f%n", total);
+			System.out.println("Thank you for ordering. Your food will come shortly!");
 		}
-}
+}//end of class
 	  
 
 
 
-
-
-
-
-
-
-//private double price;
-//private String date;  
-//private String name;
-//private int quantity;
-
-
-	
-
-
-
-
-
-
-/*
-//order ID getters
-public int getOrderID() {
-    return orderID;
-}
-//order ID setters
-public void setOrderID(int orderID) {
-    this.orderID = orderID;
-}
-//price getters
-public double getPrice() {
-    return price;
-}
-//price setters
-public void setPrice(double price) {
-    this.price = price;
-}
-//date getters
-public String getDate() {
-    return date;
-}
-//date setters
-public void setDate(String date) {
-    this.date = date;
-}
-//name getters
-public String getName() {
-	return name;
-}
-//name setters
-public void setName(String name) {
-	this.name=name;
-}
-//quantity getters
-public int getQuantity() {
-	return quantity;
-}
-//quantity setters
-public void setQuantity(int quantity) {
-	this.quantity = quantity;
-}
-
-public String tostring() {
-	
-	String str=" " ;
-	for(int i=0;i< order.size();i++) {
-		
-	str = order.get(i).toString()	+ " \n\n"; 
-}
-*/

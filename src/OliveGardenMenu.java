@@ -1,26 +1,19 @@
 import java.util.ArrayList;
-//import java.util.HashMap;
 
 public class OliveGardenMenu {
-	/*Other implementations trial 
-	HashMap <Integer, MenuItem> OliveGardenMenu = new HashMap<Integer, MenuItem>(); */
 	
 	ArrayList<MenuItem> OGmenu = new ArrayList<MenuItem>();
 	
 	//Constructor
-	public void OliveGardenMenu(){
+	public OliveGardenMenu(){
 			
-			populateMenu();
+		populateMenu();
 			
-		}
+	}
 	
-	//Olive Garden Constructor
 		
 		public void populateMenu(){
-			
-	//Making Menu items and adding them to the Hashmap menu
-	//HashMap <Integer, MenuItem> OliveGardenMenu = new HashMap<Integer, MenuItem>();
-		
+					
 		MenuItem MainDish1 = new MenuItem("Chicken Piccata", 16.79);
 		MenuItem MainDish2 = new MenuItem("Chicken Parmigiana", 16.29);
 		MenuItem MainDish3 = new MenuItem("Create A Sampler Italiano ", 9.99);
@@ -52,26 +45,25 @@ public class OliveGardenMenu {
 		
 		}//end of populate the menu method
 		
+		
 		//get MenuItem from the Menu to add into order
-				public MenuItem getMenuItem(int index){
-					return OGmenu.get(index);
-				}
+		public MenuItem getMenuItem(int index){
+			return OGmenu.get(index);
+		}
 				
 		public void printMenu(){
 			System.out.println("-------------------------OLIVE GARDEN MENU-------------------------");
-			//System.out.format("[Item]\t" + "%-45s %s%n", "Food Item", "Price");
+			System.out.format("[Item]\t\t\t  [Food Item] \t\t\t     [Price]\n");
 			for(int i= 1; i<OGmenu.size(); i++){
-				//System.out.println("Item [" + i + "]:" + "\t" + PBmenu.get(i));
-				//System.out.format("%-20s %-12s,PBmenu.get(i).ItemName + "\t Item Price:" + PBmenu.get(i).getItemPrice());
 				System.out.format("Item[" + i + "]:\t" + "%-45s$%.2f%n", OGmenu.get(i).getItemName(), OGmenu.get(i).getItemPrice());
 			}
 			
-		}
+		}//print menu
 		
-		//get the menu size
-				public int size() {
-					return OGmenu.size();
-				}
+		
+		public int size() {
+			return OGmenu.size();
+		}//get menu size
 	
 }//end of class
 

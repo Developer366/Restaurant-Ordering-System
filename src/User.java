@@ -1,4 +1,3 @@
-import java.io.InputStream;
 
 public class User {
 	//instance variables

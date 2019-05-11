@@ -2,12 +2,13 @@
 public class MenuItem {
 	String ItemName;
 	double ItemPrice;
-	//public Integer toString;
+
 	
 	MenuItem(String ItemName, double ItemPrice){
 		this.ItemName=ItemName;
 		this.ItemPrice=ItemPrice;				
 	}
+	
 	
 	//getters and setters 
 	public String getItemName(){
@@ -32,5 +33,5 @@ public class MenuItem {
 		//return System.out.printf("%s%f", ItemName, ItemPrice);
 		//return String.format("|%-25d|", ItemPrice);
 	}
-	//"|-15s%|,
+	
 }//end of class

@@ -1,61 +1,73 @@
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+
+//import java.awt.Menu;
 //import junit.framework.*;
 //import junit.framework.Assert;
 //import org.junit.Test;
 //import org.junit.Assert.*;
 //import junit.framework.*;
 
-
 public class JunitTest {
 
-	
-	@Test
-	public void testgetItemPrice() {
-		//PaneraBreadMenu pbm = new PaneraBreadMenu();
-		MenuItem food1 = new MenuItem("Pizza", 9);
-		
-		//MenuItem Appetizer1 = new MenuItem("Mac & Cheese", 8.79);
 
-		double output = food1.getItemPrice();
-		
-		assertEquals(9, food1.getItemPrice());
-		//pbm.add(2,Appetizer1);
-		
-	}
+//Menu Item Methods	
 	@Test
-	public void testgetItemPricefrommenu() {
+	public void TestgetItemName(){
+		MenuItem food1 = new MenuItem("Pizza", 10.99);
+		String output = food1.getItemName();
+		assertEquals("Pizza" , output);
+	}//#1
+			
+	@Test
+	public void TestgetItemPrice() {		
+		MenuItem food2 = new MenuItem("Lasagna", 10.99);				
+		double output = food2.getItemPrice();		
+		assertEquals(output, food2.getItemPrice(),0);	
+	}//#2
+	
+//Panera Bread Menu Methods
+		
+	@Test
+	public void TestgetItemPricePaneraBreadMenu() {
 		PaneraBreadMenu pdm = new PaneraBreadMenu();
+		//PBmenu.add(3, MainDish3);
+		//MenuItem MainDish3 = new MenuItem("BBQ Chicken Flatbread", 6.79);
 		double output = pdm.getMenuItem(3).getItemPrice();
-		assertEquals(6.79,output);
+		assertEquals(6.79,output,0);
 		
-	}
+	}//#3
 	
-//	OliveGardenMenu olivegardenmenu = new OliveGardenMenu();
-/*	@Test
-	public void testgetMenuItemolive() {
-		OliveGardenMenu olivegardenmenu = new OliveGardenMenu();
-		//olivegardenmenu.getMenuItem(2);
-		assertEquals(olivegardenmenu.getMenuItem(0))
-		//fail("Not yet implemented");
-	}
+//Olive Garden Menu Methods
 	
 	@Test
-	public void testgetMenuItemPanera() {
-		PaneraBreadMenu pbm = new PaneraBreadMenu();
-		
-		equals(pbm.getMenuItem(3));
-	
-		
-	}
+	public void TestgetItemNameOliveGardenMenu(){
+		OliveGardenMenu ogm = new OliveGardenMenu();
+		//OGmenu.add(5, Appetizer1);
+		//MenuItem Appetizer1 = new MenuItem("Fried Mozzarella", 6.79);
+		String output1 = ogm.getMenuItem(5).getItemName();
+		assertEquals(output1, "Fried Mozzarella");
+	}//#4
 	
 	@Test
-	public void testgetlastname() {
-		
-		
-	}
-*/	
+	public void TestgetMenuItemOliveGardenMenu(){
+		OliveGardenMenu ogm = new OliveGardenMenu();
+		//OGmenu.add(5, Appetizer1);
+		MenuItem Appetizer1 = new MenuItem("Fried Mozzarella", 6.79);
+		MenuItem menuitem5 = ogm.getMenuItem(5);
+		assertEquals(menuitem5.toString(), Appetizer1.toString());
+	}//#5
 	
+//Restaurant Class
+	
+	@Test
+	public void TestgetRestaurantAddress(){
+		//Restaurant PaneraBread1 = new Restaurant("Panera Bread"," 67-64 104th st" , "534-543-2345");
+		Restaurant PizzaHut = new Restaurant("PizzaHut23","6051 Myrtle Ave","(718) 456-5300");
+		String pizzahutAddress=PizzaHut.getRestaurantAddress();;
+		assertEquals(pizzahutAddress,"6051 Myrtle Ave");		
+	}//#6
 
-}
+
+}//end of Junit Class

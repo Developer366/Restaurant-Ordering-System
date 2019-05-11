@@ -12,10 +12,11 @@ public class Restaurant {
 		this.RestaurantPhoneNumber=RestaurantPhoneNumber;
 		
 	}
+	
 	public String toString(){
 		return  "Restaurant Name: " + RestaurantName +
 				"\t Restaurant Address: " + RestaurantAddress + 
-				"\t Restaurant Phone Number: " + RestaurantPhoneNumber;		
+				"\t\t Restaurant Phone Number: " + RestaurantPhoneNumber;		
 	}
 	
 	//RestaurantName
